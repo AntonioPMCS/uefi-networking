@@ -9,6 +9,8 @@
 #include <Protocol/Tcp4.h>
 #include <Protocol/ServiceBinding.h>
 
+#define BUFFER_SIZE  0x10000
+
 EFI_STATUS
 EFIAPI
 SendHttpRequest (
@@ -19,7 +21,7 @@ SendHttpRequest (
     EFI_SERVICE_BINDING_PROTOCOL  *ServiceBinding;
     EFI_HANDLE                    *Handle;
     EFI_HTTP_PROTOCOL             *HttpProtocol;   
-    UINT8                          *Buffer       
+    UINT8                         *Buffer;       
     //EFI_SIMPLE_NETWORK_PROTOCOL   *SimpleNetwork;
 
     // most returns ignore memory allocation...
