@@ -1062,3 +1062,7 @@
   # TPM support
   #
 !include OvmfPkg/Include/Dsc/OvmfTpmComponentsDxe.dsc.inc
+
+
+# Testing Networking
+SoftI9/PrototypeOne.inf
